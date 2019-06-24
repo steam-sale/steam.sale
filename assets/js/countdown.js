@@ -19,20 +19,55 @@ var x = setInterval(function() {
 	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-	// Fix plurality (is that a word?) of day/days
-	var dayP = " Days"
-	if (days === 1) {
-		dayP = " Day"
+	// Accommodate less than 1 day, 1 hour, etc. (this is super shitty coding, I know, go away)
+	// and fix plurality (is that a word?) of time unit
+	var unitP = " Days"
+	var timeUnit = days
+	if (days === 1) { // Days to go
+		unitP = " Day"
+	}
+	else if (days < 1) {
+		if (hours > 1) { // Only hours left
+			unitP = " Hours"
+			timeUnit = hours
+		}
+		else if (hours === 1) { // Only 1 hour left
+			unitP = " Hour"
+			timeUnit = hours
+		}
+		else if (hours < 1) {
+			if (minutes > 1) { // Only minutes left
+				unitP = " Minutes"
+				timeUnit = minutes
+			}
+			else if (minutes === 1) { // Only 1 minute left
+				unitP = " Minute"
+				timeUnit = minutes
+			}
+			else if (minutes < 1) {
+				if (seconds > 1) { // Only seconds left
+					unitP = " Seconds"
+					timeUnit = seconds
+				}
+				else if (seconds === 1) { // Only 1 second left
+					unitP = " Second"
+					timeUnit = seconds
+				}
+				else if (seconds < 1) { // Sale has started
+					// Nothing, it's handled later
+				}
+			}
+		}
 	}
 
 	// Display the result in the element with id="demo"
 	// document.getElementById("demo").innerHTML = days + "d " + hours + "h "
 	// + minutes + "m " + seconds + "s ";
-	document.getElementById("countdown-clock").innerHTML = "<h2>" + days + dayP + "</h2>";
+	document.getElementById("countdown-clock").innerHTML = "<h2>" + timeUnit + unitP + "</h2>";
 
 	// If the count down is finished, write some text
 	if (distance < 0) {
 		clearInterval(x);
-		document.getElementById("demo").innerHTML = "Now";
+		document.getElementById("countdown-clock").innerHTML = "<h2>Ongoing</h2>";
 	}
 }, 1000);
