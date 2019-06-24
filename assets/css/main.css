@@ -85,4 +85,11 @@ body {
 	margin: 5px;
 	margin-left: 15px;
 	border-radius: 3px;
+	justify-content: space-between;
 }
+.review-score {
+	display: inline-flex;
+}
+/*.review-content h4 {
+	font-size: 1.2em;
+}*/
