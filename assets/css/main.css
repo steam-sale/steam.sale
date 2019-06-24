@@ -17,7 +17,6 @@ body {
 	width: 50%;
 	flex-direction: column;
 	justify-content: center;
-	background-color: #D3D3D3;
 	padding: 5px;
 	border-style: solid;
 	border-color: black;
@@ -128,4 +127,31 @@ a:visited {
 #soon {
 	padding-right: 75px;
 	padding-left: 75px;
+}
+.panel-holder {
+	display: flex;
+	margin: auto;
+	width: 50%;
+	flex-direction: row;
+	justify-content: center;
+}
+.half-panel {
+	display: flex;
+	width: 50%;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #D3D3D3;
+	padding: 5px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 3px;
+	background-color: #282936;
+	border: 1px solid #191921;
+	border-radius: 6px;
+}
+.lefty {
+	margin-right: 2.5px;
+}
+.righty {
+	margin-left: 2.5px;
 }
