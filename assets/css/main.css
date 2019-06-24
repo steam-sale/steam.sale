@@ -170,3 +170,9 @@ a:visited {
 	border-radius: 3px;
 	/*justify-content: space-between;*/
 }
+.prof-pic {
+	width: 130px;
+}
+.prof {
+	justify-content: flex-start;
+}
