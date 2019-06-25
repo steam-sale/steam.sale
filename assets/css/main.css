@@ -14,7 +14,7 @@ body {
 .panel {
 	display: flex;
 	margin: auto;
-	width: 50%;
+	width: 52%;
 	flex-direction: column;
 	justify-content: center;
 	padding: 5px;
@@ -132,7 +132,7 @@ a:visited {
 	display: flex;
 	margin: auto;
 	margin-bottom:5px;
-	width: 50%;
+	width: 53%;
 	flex-direction: row;
 	justify-content: center;
 }
