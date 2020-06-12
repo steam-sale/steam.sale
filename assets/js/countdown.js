@@ -2,7 +2,7 @@
 // https://www.w3schools.com/howto/howto_js_countdown.asp
 
 // Start time of next sale; time counting down to
-var nextSaleDate = new Date(Date.UTC(2019, 10, 24, 17, 0, 0)).getTime(); // Start time in UTC (EDT + 4 hours)
+var nextSaleDate = new Date(Date.UTC(2020, 6, 25, 17, 0, 0)).getTime(); // Start time in UTC (EDT + 4 hours)
 
 // Update the count down every 1 second
 var x = setInterval(function() {
